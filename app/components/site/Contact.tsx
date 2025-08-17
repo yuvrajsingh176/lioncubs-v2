@@ -16,7 +16,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 px-4 ">
+    <section id="contactt" className="py-16 md:py-24 px-4 mx-1 ">
       <motion.div
         initial="hidden"
         whileInView="visible"
