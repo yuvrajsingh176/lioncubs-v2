@@ -4,6 +4,7 @@ import { ReactNode, useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import Footer from "./components/site/Footer";
+import Image from "next/image";
 
 export default function Providers({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,11 +18,16 @@ export default function Providers({ children }: { children: ReactNode }) {
   return (
     <>
       {/* Navbar */}
-      <nav className="bg-blue-600 text-white fixed w-full z-50 shadow-md">
+      <nav className="bg-white text-blue-600  fixed w-full z-50 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16 items-center">
+          <div className="flex justify-between h-fit items-center">
             <Link href="/" className="text-xl font-bold">
-              LionCubs Fitness
+              <Image
+                src={'/logo.jpg'}
+                height={200}
+                width={200}
+                alt="logo"
+              />
             </Link>
 
             {/* Desktop Links */}

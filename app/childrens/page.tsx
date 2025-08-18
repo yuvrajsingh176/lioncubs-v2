@@ -175,6 +175,22 @@ const ChildrenPage = () => {
                 </div>
             </motion.div>
 
+
+            {/* Birthday Bash & Success Story */}
+            <motion.div initial="hidden" animate="visible" variants={fadeUp} className="max-w-5xl mx-auto mb-12 text-blue-700">
+                <h2 className="text-2xl font-bold text-blue-900 mb-4 text-center">Special Programs & Success</h2>
+                <div className="grid md:grid-cols-2 gap-6">
+                    <motion.div whileHover={{ scale: 1.03 }} className="bg-white p-6 rounded-lg shadow-md text-center">
+                        <Cake className="text-blue-600 text-4xl mb-4 mx-auto" />
+                        <p>We organize birthday celebrations at our center for 1–2 hours with thematic activities. Complimentary cake included!</p>
+                    </motion.div>
+                    <motion.div whileHover={{ scale: 1.03 }} className="bg-white p-6 rounded-lg shadow-md text-center">
+                        <Trophy className="text-blue-600 text-4xl mb-4 mx-auto" />
+                        <p>During our Summer Sports Camp 2025, over 120 children participated in multi-sport challenges with 95% parent satisfaction. Many went on to join school teams and represent their age group in inter-school competitions — showcasing confidence, skills, and sportsmanship.</p>
+                    </motion.div>
+                </div>
+            </motion.div>
+
             {/* Key Benefits */}
             <motion.div initial="hidden" animate="visible" variants={fadeUp} className="max-w-4xl mx-auto mb-12">
                 <h2 className="text-2xl font-bold text-blue-900 mb-6 text-center">Key Benefits</h2>
@@ -281,20 +297,6 @@ const ChildrenPage = () => {
             </motion.section>
 
 
-            {/* Birthday Bash & Success Story */}
-            <motion.div initial="hidden" animate="visible" variants={fadeUp} className="max-w-5xl mx-auto mb-12 text-blue-700">
-                <h2 className="text-2xl font-bold text-blue-900 mb-4 text-center">Special Programs & Success</h2>
-                <div className="grid md:grid-cols-2 gap-6">
-                    <motion.div whileHover={{ scale: 1.03 }} className="bg-white p-6 rounded-lg shadow-md text-center">
-                        <Cake className="text-blue-600 text-4xl mb-4 mx-auto" />
-                        <p>We organize birthday celebrations at our center for 1–2 hours with thematic activities. Complimentary cake included!</p>
-                    </motion.div>
-                    <motion.div whileHover={{ scale: 1.03 }} className="bg-white p-6 rounded-lg shadow-md text-center">
-                        <Trophy className="text-blue-600 text-4xl mb-4 mx-auto" />
-                        <p>During our Summer Sports Camp 2025, over 120 children participated in multi-sport challenges with 95% parent satisfaction. Many went on to join school teams and represent their age group in inter-school competitions — showcasing confidence, skills, and sportsmanship.</p>
-                    </motion.div>
-                </div>
-            </motion.div>
 
             {/* Call to Action */}
             <motion.div initial="hidden" animate="visible" variants={fadeUp} className="text-center mb-12">
