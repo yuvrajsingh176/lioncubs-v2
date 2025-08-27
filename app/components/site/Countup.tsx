@@ -1,36 +1,32 @@
 "use client";
-import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { animate, useInView } from "framer-motion";
 
-function CountUp({ target, duration = 2 }: { target: number; duration?: number }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true });
-  const controls = useAnimation();
+type Props = {
+  target: number;
+  duration?: number;     // seconds
+  decimals?: number;     // digits after decimal
+};
+
+export default function CountUp({ target, duration = 2, decimals = 0 }: Props) {
+  const ref = useRef<HTMLSpanElement | null>(null);
+  const inView = useInView(ref, { once: true, margin: "-50px" });
   const [value, setValue] = useState(0);
 
   useEffect(() => {
-    if (inView) {
-      controls.start({
-        val: target,
-        transition: { duration, ease: "easeOut" },
-      });
-    }
-  }, [inView, target, duration, controls]);
+    if (!inView) return;
+    const controls = animate(0, target, {
+      duration,
+      ease: "easeOut",
+      onUpdate: (latest) => setValue(latest),
+    });
+    return () => controls.stop();
+  }, [inView, target, duration]);
 
-  return (
-    <motion.span
-      ref={ref}
-      animate={controls}
-      initial={{ val: 0 }}
-      variants={{}}
-      onUpdate={(latest) => {
-        // Round for display
-        setValue(Math.floor((latest as any).val || 0));
-      }}
-    >
-      {value.toLocaleString()}
-    </motion.span>
-  );
+  const formatted = Number(value).toLocaleString(undefined, {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  });
+
+  return <span ref={ref}>{formatted}</span>;
 }
-
-export default CountUp;
