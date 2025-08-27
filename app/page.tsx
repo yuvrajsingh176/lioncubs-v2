@@ -97,9 +97,9 @@ function Feature({
 
 function Reason({ icon: Icon, text }: { icon: any; text: string }) {
   return (
-    <motion.li variants={listItem} className="flex items-start gap-3">
+    <motion.li variants={listItem} className="flex justify-start text-start items-start gap-3">
       <CheckCircle2 className="mt-0.5 h-5 w-5 text-blue-600" />
-      <span className="text-sm md:text-base">{text}</span>
+      <span className="text-sm md:text-base text-start">{text}</span>
     </motion.li>
   );
 }
@@ -189,7 +189,7 @@ export default function AboutEnhanced() {
         </motion.div>
 
         {/* Split: Reasons + Visual */}
-        <div className="mt-16 grid items-center gap-10 md:grid-cols-2">
+        <div className="mt-16">
           {/* Reasons */}
           <motion.div
             variants={containerStagger}
@@ -198,14 +198,20 @@ export default function AboutEnhanced() {
             viewport={{ once: true }}
             className="order-2 md:order-1"
           >
-            <h3 className="text-2xl font-semibold md:text-3xl">Why families choose us</h3>
-            <div className="mt-6 grid gap-8 sm:grid-cols-2">
-              <ul className="space-y-4">
+            <h3 className="text-2xl font-semibold text-center md:text-3xl">
+              Why families choose us
+            </h3>
+
+            <div className="mt-6  gap-8 flex justify-center md:flex-row flex-col ">
+              {/* Left list */}
+              <ul className="space-y-4 text-center md:text-left md:justify-start flex flex-col items-center md:items-start">
                 {leftReasons.map((r) => (
                   <Reason key={r.text} icon={r.icon} text={r.text} />
                 ))}
               </ul>
-              <ul className="space-y-4">
+
+              {/* Right list */}
+              <ul className="space-y-4 text-center md:text-left md:justify-start flex flex-col items-center md:items-start">
                 {rightReasons.map((r) => (
                   <Reason key={r.text} icon={r.icon} text={r.text} />
                 ))}
@@ -213,22 +219,32 @@ export default function AboutEnhanced() {
             </div>
 
             {/* CTA */}
-            <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
+            <motion.div
+              variants={fadeUp}
+              className="mt-8 flex flex-wrap justify-center gap-3"
+            >
               <a href={whatsappUrl} target="_blank" rel="noreferrer">
-                <Button variant="hero" size="lg" className="transition-transform hover:scale-105">
+                <Button
+                  variant="hero"
+                  size="lg"
+                  className="transition-transform hover:scale-105"
+                >
                   Book Free Demo
                 </Button>
               </a>
               <a href="tel:+919818387498">
-                <Button variant="soft" size="lg" className="transition-transform hover:scale-105">
+                <Button
+                  variant="soft"
+                  size="lg"
+                  className="transition-transform hover:scale-105"
+                >
                   Call Now
                 </Button>
               </a>
             </motion.div>
           </motion.div>
-
-
         </div>
+
 
         {/* Stats row */}
         <motion.div
