@@ -82,46 +82,13 @@ export default function Contact() {
                   </Button>
                 </a>
 
-                {/* Google Form Button */}
-                <a
-                  href="https://forms.gle/your-google-form-id"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Button
-                    variant="hero"
-                    className="hover:scale-105 transition-transform bg-blue-500 hover:bg-blue-600"
-                  >
-                    Fill Google Form
-                  </Button>
-                </a>
+             
               </div>
 
             </CardContent>
           </Card>
         </motion.div>
 
-        {/* Taglines / Promotions Card */}
-        {/* <motion.div whileHover={{ scale: 1.03 }} className="transition-transform">
-          <Card className="bg-gradient-to-br from-blue-50 to-blue-100">
-            <CardHeader>
-              <CardTitle>Taglines & Promotions</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4 text-blue-900">
-              {[
-                "Get Your Cub Moving! Book a Free Trial",
-                "Start Roaring with Confidence – Join LionCubs Today!",
-                "New Camp Alert: Limited Spots — Enroll Now!",
-                "Small Steps, Big Roars — Join Our Fitness Family!",
-              ].map((t) => (
-                <div key={t} className="flex items-start gap-3">
-                  <span className="mt-2 w-2 h-2 rounded-full bg-blue-600" />
-                  <p className="font-medium">{t}</p>
-                </div>
-              ))}
-            </CardContent>
-          </Card>
-        </motion.div> */}
       </motion.div>
     </section>
   );

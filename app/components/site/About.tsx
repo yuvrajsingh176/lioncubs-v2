@@ -92,7 +92,7 @@ export default function About() {
         </motion.div>
 
         {/* Reasons */}
-        <div className="mt-12  gap-8 lg:grid-cols-2 p-2 w-full  flex justify-around items-center">
+        <div className="mt-12  gap-8 lg:grid-cols-2 p-2 w-full  flex flex-col md:flex-row justify-around items-center">
           {[{ title: "Why Choose Us?", items: leftReasons }, { title: "What You Get", items: rightReasons }].map(
             (block) => (
               <motion.div
@@ -105,7 +105,7 @@ export default function About() {
                   visible: { transition: { staggerChildren: 0.15 } },
                 }}
               >
-                <h3 className="text-2xl font-semibold">{block.title}</h3>
+                <h3 className="text-2xl text-center md:text-start font-semibold">{block.title}</h3>
                 <ul className="mt-6 space-y-4">
                   {block.items.map(({ icon: Icon, text }) => (
                     <motion.li
