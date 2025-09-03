@@ -97,9 +97,9 @@ function Feature({
 
 function Reason({ icon: Icon, text }: { icon: any; text: string }) {
   return (
-    <motion.li variants={listItem} className="flex justify-start text-start items-start gap-3">
+    <motion.li variants={listItem} className="flex justify-start text-start w-full items-start gap-3">
       <CheckCircle2 className="mt-0.5 h-5 w-5 text-blue-600" />
-      <span className="text-sm md:text-base text-start">{text}</span>
+      <span className="text-sm md:text-base text-start w-full">{text}</span>
     </motion.li>
   );
 }
@@ -175,18 +175,87 @@ export default function AboutEnhanced() {
           </p>
         </motion.div>
 
-        {/* Feature cards */}
-        <motion.div
-          variants={containerStagger}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          {features.map((f) => (
-            <Feature key={f.title} icon={f.icon} title={f.title} desc={f.desc} />
-          ))}
-        </motion.div>
+        {/* Services Section */}
+        <section className="mt-16">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeUp}
+            className="text-center"
+          >
+            <h3 className="text-2xl font-semibold md:text-3xl">Our Services</h3>
+            <p className="mt-2 text-muted-foreground text-sm md:text-base">
+              Programs designed for every age group to stay active, healthy, and happy.
+            </p>
+          </motion.div>
+
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            {/* Kids Programs */}
+            <Link href={'/adults'}>
+              <motion.div
+                whileHover={{ y: -4 }}
+                variants={fadeUp}
+                className="rounded-2xl border bg-white/70 p-6 text-center shadow-sm backdrop-blur transition-all hover:shadow-md"
+              >
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-blue-100 to-indigo-100">
+                  <Users className="h-7 w-7 text-blue-600" />
+                </div>
+                <h4 className="mt-4 text-lg font-semibold">Kids Programs</h4>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Fun multi-sport drills, creative movement, and fitness activities designed
+                  for children aged 2.5–10.
+                </p>
+              </motion.div>
+            </Link>
+
+            {/* Adult Programs */}
+            <Link href={'/childrens'}>
+              <motion.div
+                whileHover={{ y: -4 }}
+                variants={fadeUp}
+                className="rounded-2xl border bg-white/70 p-6 text-center shadow-sm backdrop-blur transition-all hover:shadow-md"
+              >
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-green-100 to-emerald-100">
+                  <Dumbbell className="h-7 w-7 text-green-600" />
+                </div>
+                <h4 className="mt-4 text-lg font-semibold">Adult Programs</h4>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Zumba, Yoga, Table Tennis, and wellness events that help adults stay fit,
+                  reduce stress, and build community.
+                </p>
+              </motion.div>
+            </Link>
+          </div>
+        </section>
+
+        <div className="mt-16">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeUp}
+            className="text-center"
+          >
+            <h3 className="text-2xl font-semibold md:text-3xl">Our Motive</h3>
+            <p className="mt-2 text-muted-foreground text-sm md:text-base">
+              Our motive is to build strong bodies, sharp minds, and happy hearts through fun, safe, and inclusive fitness for kids, adults, and families.            </p>
+          </motion.div>
+          {/* Feature cards */}
+          <motion.div
+            variants={containerStagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {features.map((f) => (
+              <Feature key={f.title} icon={f.icon} title={f.title} desc={f.desc} />
+            ))}
+          </motion.div>
+        </div>
+
+
 
         {/* Split: Reasons + Visual */}
         <div className="mt-16">
@@ -258,7 +327,7 @@ export default function AboutEnhanced() {
             { label: "Students trained", value: "21500" },
             { label: "Avg. class rating", value: "4.9" },
             { label: "Cities", value: "7" },
-            { label: "Sports", value: "80" },
+            { label: "Sports", value: "7" },
             { label: "Coaches", value: "101" },
           ].map((s) => (
             <motion.div key={s.label} variants={fadeUp} className="rounded-2xl border bg-white/70 p-6 text-center shadow-sm backdrop-blur">

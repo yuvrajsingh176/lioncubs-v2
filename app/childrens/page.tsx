@@ -115,7 +115,7 @@ export default function ChildrenPage() {
         >
           <div className="mx-auto inline-flex items-center gap-2 rounded-full border bg-white/70 px-4 py-1 text-sm text-blue-700 shadow-sm backdrop-blur">
             <Sparkles className="h-4 w-4" />
-            Ages 2.5–12 • Multi-Sport • Fun-First
+            Ages 2.5–10 • Multi-Sport • Fun-First
           </div>
           <h1 className="mt-3 text-3xl font-bold text-blue-900 md:text-5xl">
             Kids Programs
