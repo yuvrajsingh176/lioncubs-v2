@@ -72,23 +72,23 @@ export default function Contact() {
                   </div>
 
                   {/* Buttons */}
-                  <div className="pt-3 grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    <a href={whatsappUrl} target="_blank" rel="noreferrer" className="col-span-1 sm:col-span-3 md:col-span-1">
-                      <Button className="w-full px-4 py-3 flex items-center justify-center gap-2" variant="default">
+                  <div className="pt-3 flex flex-col  gap-3">
+                    <a href={whatsappUrl} target="_blank" rel="noreferrer" className="col-span-1 sm:col-span-3 md:col-span-1 w-full">
+                      <Button className=" px-4 py-3 flex items-center justify-center gap-2 w-full" variant="default">
                         <PhoneCall className="w-4 h-4" />
                         Message on WhatsApp
                       </Button>
                     </a>
 
-                    <a href={phoneUrl} className="col-span-1 sm:col-span-3 md:col-span-1">
+                    <a href={phoneUrl} className="col-span-1 sm:col-span-3 md:col-span-1 w-full">
                       <Button className="w-full px-4 py-3 flex items-center justify-center gap-2" variant="outline">
                         <PhoneCall className="w-4 h-4" />
                         Call Now
                       </Button>
                     </a>
 
-                    <a href={emailUrl} className="col-span-1 sm:col-span-3 md:col-span-1">
-                      <Button className="w-full px-4 py-3 flex items-center justify-center gap-2" variant="ghost">
+                    <a href={emailUrl} className="col-span-1 sm:col-span-3 md:col-span-1 w-full">
+                      <Button className="w-full px-4 py-3 flex items-center justify-center gap-2" variant="outline">
                         <Mail className="w-4 h-4" />
                         Email Us
                       </Button>
