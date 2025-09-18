@@ -25,7 +25,6 @@ import { Button } from "./components/ui/button";
 import CountUp from "./components/site/Countup";
 import Link from "next/link";
 import { useState } from "react";
-import ContactDetails from "./components/site/Contactnew";
 import Contact from "./components/site/Contact";
 
 
