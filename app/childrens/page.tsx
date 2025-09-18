@@ -12,7 +12,9 @@ import {
   Users,
   Sparkles,
   CheckCircle2,
+  Star,
 } from "lucide-react";
+import { Card } from "../components/ui/card";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -306,6 +308,41 @@ export default function ChildrenPage() {
             ))}
           </div>
         </motion.section>
+
+        {/* Testimonials (simple auto-scrolling marquee) */}
+        <div className="mt-16">
+          <motion.h3
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center text-2xl font-semibold md:text-3xl"
+          >
+            Parents love the energy
+          </motion.h3>
+
+          <div className="relative mt-6 overflow-hidden">
+            <div className="animate-[marquee_18s_linear_infinite] flex gap-4 [--gap:1rem] hover:[animation-play-state:paused]">
+              {[
+                { name: "Rohit Sharma", comment: "My son loves the multi-sport sessions. Coaches are amazing!" },
+                { name: "Neha Verma", comment: "Great environment for kids to learn and build confidence." },
+                { name: "Amit Singh", comment: "Friendly staff and safe equipment. Highly recommend LionCubs Fitness!" },
+                { name: "Simran K.", comment: "Beautiful balance of discipline and fun—my daughter looks forward every week." },
+              ].map((t, i) => (
+                <Card key={i} className="min-w-[280px] rounded-2xl border-slate-200/60 bg-white/80 px-4 py-3 shadow-sm backdrop-blur">
+                  <div className="flex items-center gap-2">
+                    <Star className="h-4 w-4 text-amber-500" />
+                    <Star className="h-4 w-4 text-amber-500" />
+                    <Star className="h-4 w-4 text-amber-500" />
+                    <Star className="h-4 w-4 text-amber-500" />
+                    <Star className="h-4 w-4 text-amber-500" />
+                  </div>
+                  <p className="mt-2 text-sm text-slate-700">{t.comment}</p>
+                  <div className="mt-1 text-xs text-muted-foreground">— {t.name}</div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
 
         {/* Coaching Team */}
         <motion.section

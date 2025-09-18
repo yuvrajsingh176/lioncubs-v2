@@ -11,16 +11,6 @@ export default function Footer() {
         <p className="text-sm text-muted-foreground">
           © {new Date().getFullYear()} LionCubs Fitness. All rights reserved.
         </p>
-
-        {/* Show nav only on home page */}
-        {pathname === "/" && (
-          <nav className="flex flex-col gap-3 text-sm text-muted-foreground">
-            <a href="#about" className="hover:text-foreground">About</a>
-            <a href="#programs" className="hover:text-foreground">Programs</a>
-            <a href="#faq" className="hover:text-foreground">FAQs</a>
-            <a href="#contactt" className="hover:text-foreground">Contact</a>
-          </nav>
-        )}
       </div>
     </footer>
   );
