@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const whatsappUrl = `https://wa.me/919818387160?text=Hi%20LionCubs%20Fitness!%20Interested%20in%20a%20free%20demo%20class.`;
 const emailUrl = `mailto:lioncubsfitness@gmail.com`;
-const phoneUrl = `tel:+919818387160`;
+const phoneUrl = `tel:+919958023264`;
 const websiteUrl = `https://www.lioncubsfitness.in/`;
 
 export default function Contact() {
@@ -43,9 +43,9 @@ export default function Contact() {
 
                   <div className="space-y-3 mt-2">
                     <ContactRow icon={<PhoneCall className="w-4 h-4 text-blue-600" />} label="Call / WhatsApp" value={
-                      <a href={whatsappUrl} target="_blank" rel="noreferrer" className="font-medium hover:underline">
-                        +91 98183 87160
-                      </a>
+                      <p className="font-medium hover:underline">
+                        +91 9958023264
+                      </p>
                     } />
 
                     <ContactRow icon={<Mail className="w-4 h-4 text-blue-600" />} label="Email" value={
@@ -55,7 +55,7 @@ export default function Contact() {
                     } />
 
                     <ContactRow icon={<MapPin className="w-4 h-4 text-blue-600" />} label="Locations" value={
-                      <div className="font-medium">Jagriti Enclave (Delhi) • Palam Vihar (Gurugram)</div>
+                      <div className="font-medium">3rd Floor,H.No.420,Jagriti Enclave,Anand Vihar,New Delhi(110092)</div>
                     } />
 
                     <ContactRow icon={<Instagram className="w-4 h-4 text-blue-600" />} label="Instagram" value={
