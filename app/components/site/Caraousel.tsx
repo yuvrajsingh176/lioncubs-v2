@@ -33,17 +33,19 @@ export default function Carousel({ slides }: { slides: Slide[] }) {
   };
 
   return (
-    <div className="w-full h-full pt-[21px]  ">
+    <div className="w-full h-full md:pt-[21px]  ">
       <Slider {...settings}>
         {slides.map((s) => (
-          <div key={s.id} className="">
+          <div key={s.id} className="border ">
             <div className="relative  overflow-hidden">
               {/* Next/Image in a fixed aspect-box */}
-              <div className="relative w-full h-[70vh] bg-black/50"> {/* bg color shows behind */}
+              <div className="relative w-full flex justify-center h-full bg-gray/50"> {/* bg color shows behind */}
                 <Image
                   src={s.imageUrl}
                   alt={s.alt ?? "slide"}
-                  fill
+                  width={1000}
+                  height={1000}
+                  className="w-full md:w-fit  h-full"
                   style={{ objectFit: "contain" }} // shows whole image, may have empty bands
                 />
               </div>
