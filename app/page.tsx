@@ -34,7 +34,7 @@ import Carousel from "./components/site/Caraousel";
 const galleryImages = [
   { src: "/gallery/heroimage1.avif", alt: "Agility ladder drills" },
   { src: "/gallery/heroimage2.avif", alt: "Coach high-five" },
-  { src: "/gallery/heroimage3.avif", alt: "Team huddle" },
+  { src: "/gallery/heroimage3.jpg", alt: "Team huddle" },
   { src: "/gallery/heroimage4.avif", alt: "Parent-child session" },
   { src: "/gallery/heroimage5.avif", alt: "Adult yoga class" },
   { src: "/gallery/heroimage6.avif", alt: "Zumba energy" },
