@@ -36,7 +36,7 @@ export default function Carousel({ slides }: { slides: Slide[] }) {
     <div className="w-full h-full md:pt-[21px]  ">
       <Slider {...settings}>
         {slides.map((s) => (
-          <div key={s.id} className="border ">
+          <div key={s.id} className=" ">
             <div className="relative  overflow-hidden">
               {/* Next/Image in a fixed aspect-box */}
               <div className="relative w-full flex justify-center h-full bg-gray/50"> {/* bg color shows behind */}
