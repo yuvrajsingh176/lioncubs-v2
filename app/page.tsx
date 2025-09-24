@@ -26,6 +26,8 @@ import CountUp from "./components/site/Countup";
 import Link from "next/link";
 import { useState } from "react";
 import Contact from "./components/site/Contact";
+import CaraouselHero from "./components/site/CaraouselHero";
+import Carousel from "./components/site/Caraousel";
 
 
 
@@ -38,6 +40,14 @@ const galleryImages = [
   { src: "/gallery/heroimage6.avif", alt: "Zumba energy" },
 ];
 
+const SliderImages = [
+  { id: 1, imageUrl: "/gallery/heroimage1.avif", alt: "Agility ladder drills" },
+  { id: 2, imageUrl: "/gallery/heroimage2.avif", alt: "Coach high-five" },
+  { id: 3, imageUrl: "/gallery/heroimage3.jpg", alt: "Team huddle" },
+  { id: 4, imageUrl: "/gallery/heroimage4.avif", alt: "Parent-child session" },
+  { id: 5, imageUrl: "/gallery/heroimage5.avif", alt: "Adult yoga class" },
+  { id: 6, imageUrl: "/gallery/heroimage6.avif", alt: "Zumba energy" },
+];
 
 
 
@@ -151,13 +161,15 @@ export default function AboutEnhanced() {
   return (
     <section id="about" className="relative overflow-hidden">
       {/* Decorative gradient blobs */}
+      <Carousel slides={SliderImages} />
+
       <motion.div
         style={{ y }}
         aria-hidden
         className="pointer-events-none absolute -top-24 right-[-10%] h-72 w-72 rounded-full bg-blue-300/30 blur-3xl" />
       <div aria-hidden className="pointer-events-none absolute -bottom-24 left-[-10%] h-80 w-80 rounded-full bg-cyan-200/30 blur-3xl" />
 
-      <div className="md:px-32 px-4 py-16 md:py-24">
+      <div className="md:px-32 px-4 pt-8 pb-16 md:pb-24">
         {/* Heading */}
         <motion.div
           className="mx-auto max-w-3xl text-center"

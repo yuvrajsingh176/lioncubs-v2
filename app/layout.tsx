@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Poppins, Faster_One } from "next/font/google";
 import "./globals.css";
 import Providers from "./provider";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const poppins = Poppins({
   variable: "--font-poppins",
