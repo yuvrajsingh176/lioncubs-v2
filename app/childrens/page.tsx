@@ -35,12 +35,12 @@ export default function ChildrenPage() {
         color: "from-blue-100 to-cyan-100",
       },
       {
-        age: "5–8 years",
+        age: "4–6 years",
         desc: "Multi-sport introduction with skill-based progressions",
         color: "from-cyan-100 to-indigo-100",
       },
       {
-        age: "9–10 years",
+        age: "6–10 years",
         desc: "Advanced skill development, teamwork, and friendly play",
         color: "from-indigo-100 to-violet-100",
       },
